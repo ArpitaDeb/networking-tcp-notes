@@ -1,5 +1,7 @@
 # W2 D3: Networking with TCP + HTTP
 
+All the code for the lecture is here: https://github.com/NimaBoscarino/networking-tcp-notes
+
 Hi everyone! Thanks for sitting in on today's lecture. Networking is a big topic, but the main things to keep in mind are:
 
 1) Our computers scream at each other through wires
