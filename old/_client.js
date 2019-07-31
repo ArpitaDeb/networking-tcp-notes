@@ -1,7 +1,7 @@
 const net = require('net');
 const stdin = process.stdin
-// stdin.setRawMode(true)
 stdin.resume()
+
 // interpret incoming data as text
 stdin.setEncoding('utf8'); 
 
@@ -17,21 +17,13 @@ console.log('Connecting ...');
 // make a buffer for message, send it on enter.
 
 stdin.on('data', data => {
-  // CTRL C , paste
-  // \u0003 maps to ctrl+c input
   if (data === '\\q\n') {
     client.end();
     process.exit();
-  }
-
-  // if (data === '\u2324') {
-  //   console.log('enter!')
-  // }
+  } // \q quitting
 
   console.log('data', data)
 
-  // console.log('data', data)
-  // process.stdout.write(data)
   client.write(data)
 })
 

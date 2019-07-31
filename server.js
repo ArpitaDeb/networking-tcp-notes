@@ -1,35 +1,29 @@
-const net = require('net');
+const net = require('net')
 
-// console.log(net.createServer)
+const server = net.createServer()
 
-const server = net.createServer();
+const everyone = []
 
-// when someone connects to me, console.log('hello! new connection!')
+const doAfterConnection = (connection) => {
+    console.log('New connection')
 
-const everyone = [];
+    everyone.push(connection)
 
-server.on('connection', function(connection) {
-  let user = Math.random()
-  connection.setEncoding('utf8')
+    connection.setEncoding('utf8')
 
-  everyone.push(connection)
+    connection.on('data', (data) => {
+        console.log('NEW MESSAGE FROM A CLIENT', data)
 
-  console.log('someone connected');
-  broadcast('Someone just connected');
-  connection.write('Welcome! Anything is possible at Nimbo.com')
-
-  connection.on('data', function (data) {
-    broadcast('new message from user ' + user + ': ' + data)
-  })
-
-})
-
-const broadcast = function (message) {
-  for (let person of everyone) {
-    person.write(message)
-  }
+        // send that message to everyone
+        for (client of everyone) {
+            client.write('Message: ' + data)
+        }
+        
+        // connection.write('Thanks for the data!')
+    })
 }
 
-console.log('Listening on :9999')
-server.listen(9999)
+server.on('connection', doAfterConnection)
 
+
+server.listen(1337)
