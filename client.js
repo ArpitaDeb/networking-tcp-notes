@@ -1,33 +1,21 @@
-const net = require('net')
-const stdin = process.stdin
-stdin.resume()
+/*
+    I want to connect to a server
+    I want to send a message to the server
+    "Hello world!"
+*/
 
-// interpret incoming data as text
-stdin.setEncoding('utf8'); 
 
-const client = net.createConnection({
-    host: '192.168.88.173',
-    port: '1337'
-})
+const sendMessage = function (server) {
+    server.send("Hello world!")
+}
 
-client.setEncoding('utf8'); 
+const server = startConnection("server-1", sendMessage)
 
-stdin.on('data', data => {
-    if (data === '\\q\n') {
-        client.end();
-        process.exit();
-    } // \q quitting
+server.onConnect(sendMessage)
 
-    console.log('data', data)
+// // the server might not YET be connected
+// if (server.connection === true) {
+//     server.send("hello world!")
+// }
 
-    client.write(data)
-})
-
-client.on('connect', () => {
-    console.log('I connected!')
-    client.write('Hello world!')
-})
-
-client.on('data', (data) => {
-    console.log('NEW MESSAGE FROM THE SERVER', data)
-})
+// program terminates

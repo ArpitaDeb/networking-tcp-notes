@@ -28,6 +28,7 @@ We can layer some restrictions over the medium. For example...
 ## TCP, IP, and HTTP
 
 - IP: a highway between computers
+  - how you use the physical stuff
 - TCP: the trucks on the highway going to find a particular computer
 - HTTP: is the load on the trucks
 
