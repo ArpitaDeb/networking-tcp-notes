@@ -88,23 +88,9 @@ What are we going to talk about?
 - transportation of messages
 - what kind of messages can you make
 
+## TCP, IP, and HTTP
 
-PORTS
-
-TCP - Transmission Control Protocol
-
-
-/IP
-
-
-
-
-HTTP
-
-
-- contextual relationship between the two
-
-Client
-    - will often have to ask for something
-
-Server - host!
+- IP: a highway between computers
+  - how you use the physical stuff
+- TCP: the trucks on the highway going to find a particular computer
+- HTTP: is the load on the trucks
