@@ -2,8 +2,6 @@
 
 All the code for the lecture is here: https://github.com/NimaBoscarino/networking-tcp-notes
 
-The notes we wrote in lecture are in the `file.md` file. The notes below are a summary/
-
 Hi everyone! Thanks for sitting in on today's lecture. Networking is a big topic, but the main things to keep in mind are:
 
 1) Our computers scream at each other through wires
@@ -62,7 +60,7 @@ Fun stuff! Take a look through the code in `server.js` to see how that's being u
 
 ## HTTP
 
-A note about HTTP. HTTP is a _way to use TCP_. In other words, it's a protocol that says HOW we should use TCP. HTTP has some opinions, which involve a CLIENT and a SERVER.
+We ended off the lecture with a short discussion about HTTP. HTTP is a _way to use TCP_. In other words, it's a protocol that says HOW we should use TCP. HTTP has some opinions, which involve a CLIENT and a SERVER.
 
 CLIENT: MAKES A REQUEST TO THE SERVER
 
