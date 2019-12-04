@@ -7,8 +7,6 @@ Hi everyone! Thanks for sitting in on today's lecture. Networking is a big topic
 1) Our computers scream at each other through wires
 2) We can impose some structure on how they're allowed to scream at each other
 
-Take a look at `file.md` for the notes we wrote during class. The notes below are a summary.
-
 We started off with a bit of review:
 
 What does networking mean?
@@ -61,7 +59,7 @@ Fun stuff! Take a look through the code in `server.js` to see how that's being u
 
 ## HTTP
 
-We didn't talk about this in lecture, but I want to mention HTTP. HTTP is a _way to use TCP_. In other words, it's a protocol that says HOW we should use TCP. HTTP has some opinions, which involve a CLIENT and a SERVER.
+We ended off the lecture with a short discussion about HTTP. HTTP is a _way to use TCP_. In other words, it's a protocol that says HOW we should use TCP. HTTP has some opinions, which involve a CLIENT and a SERVER.
 
 CLIENT: MAKES A REQUEST TO THE SERVER
 
